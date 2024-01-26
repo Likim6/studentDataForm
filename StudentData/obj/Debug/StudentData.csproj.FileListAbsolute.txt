@@ -1,0 +1,10 @@
+D:\Setec mis\Y2\C#\StudentData\StudentData\bin\Debug\StudentData.exe.config
+D:\Setec mis\Y2\C#\StudentData\StudentData\bin\Debug\StudentData.exe
+D:\Setec mis\Y2\C#\StudentData\StudentData\bin\Debug\StudentData.pdb
+D:\Setec mis\Y2\C#\StudentData\StudentData\obj\Debug\StudentData.csproj.AssemblyReference.cache
+D:\Setec mis\Y2\C#\StudentData\StudentData\obj\Debug\StudentData.Form1.resources
+D:\Setec mis\Y2\C#\StudentData\StudentData\obj\Debug\StudentData.Properties.Resources.resources
+D:\Setec mis\Y2\C#\StudentData\StudentData\obj\Debug\StudentData.csproj.GenerateResource.cache
+D:\Setec mis\Y2\C#\StudentData\StudentData\obj\Debug\StudentData.csproj.CoreCompileInputs.cache
+D:\Setec mis\Y2\C#\StudentData\StudentData\obj\Debug\StudentData.exe
+D:\Setec mis\Y2\C#\StudentData\StudentData\obj\Debug\StudentData.pdb
