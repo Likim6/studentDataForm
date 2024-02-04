@@ -59,12 +59,6 @@
             this.txtb_last_name = new System.Windows.Forms.TextBox();
             this.txtb_first_name = new System.Windows.Forms.TextBox();
             this.dgv_list_emp = new System.Windows.Forms.DataGridView();
-            this.btn_save = new System.Windows.Forms.Button();
-            this.btn_cancel = new System.Windows.Forms.Button();
-            this.pdb_image = new System.Windows.Forms.PictureBox();
-            this.btn_open_img = new System.Windows.Forms.Button();
-            this.lbl_img = new System.Windows.Forms.Label();
-            this.lbl_save_action = new System.Windows.Forms.Label();
             this.grid_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_student_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grid_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,6 +71,13 @@
             this.grid_address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_cancel = new System.Windows.Forms.Button();
+            this.pdb_image = new System.Windows.Forms.PictureBox();
+            this.btn_open_img = new System.Windows.Forms.Button();
+            this.lbl_img = new System.Windows.Forms.Label();
+            this.lbl_save_action = new System.Windows.Forms.Label();
+            this.Column3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_list_emp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pdb_image)).BeginInit();
             this.SuspendLayout();
@@ -375,70 +376,13 @@
             this.grid_phone,
             this.grid_address,
             this.Column1,
-            this.Column2});
+            this.Column2,
+            this.Column3});
             this.dgv_list_emp.Location = new System.Drawing.Point(6, 331);
             this.dgv_list_emp.Name = "dgv_list_emp";
             this.dgv_list_emp.Size = new System.Drawing.Size(1428, 297);
             this.dgv_list_emp.TabIndex = 42;
             this.dgv_list_emp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_list_emp_CellContentClick);
-            // 
-            // btn_save
-            // 
-            this.btn_save.Location = new System.Drawing.Point(1189, 638);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(121, 35);
-            this.btn_save.TabIndex = 43;
-            this.btn_save.Text = "Save";
-            this.btn_save.UseVisualStyleBackColor = true;
-            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.Location = new System.Drawing.Point(1316, 638);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(118, 35);
-            this.btn_cancel.TabIndex = 44;
-            this.btn_cancel.Text = "Cancel";
-            this.btn_cancel.UseVisualStyleBackColor = true;
-            // 
-            // pdb_image
-            // 
-            this.pdb_image.Location = new System.Drawing.Point(12, 23);
-            this.pdb_image.Name = "pdb_image";
-            this.pdb_image.Size = new System.Drawing.Size(260, 213);
-            this.pdb_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pdb_image.TabIndex = 45;
-            this.pdb_image.TabStop = false;
-            // 
-            // btn_open_img
-            // 
-            this.btn_open_img.Location = new System.Drawing.Point(12, 251);
-            this.btn_open_img.Name = "btn_open_img";
-            this.btn_open_img.Size = new System.Drawing.Size(260, 35);
-            this.btn_open_img.TabIndex = 46;
-            this.btn_open_img.Text = "Select Image";
-            this.btn_open_img.UseVisualStyleBackColor = true;
-            this.btn_open_img.Click += new System.EventHandler(this.btn_open_img_Click);
-            // 
-            // lbl_img
-            // 
-            this.lbl_img.AutoSize = true;
-            this.lbl_img.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_img.Location = new System.Drawing.Point(12, 301);
-            this.lbl_img.Name = "lbl_img";
-            this.lbl_img.Size = new System.Drawing.Size(70, 15);
-            this.lbl_img.TabIndex = 47;
-            this.lbl_img.Text = "Image Path";
-            // 
-            // lbl_save_action
-            // 
-            this.lbl_save_action.AutoSize = true;
-            this.lbl_save_action.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_save_action.Location = new System.Drawing.Point(302, 24);
-            this.lbl_save_action.Name = "lbl_save_action";
-            this.lbl_save_action.Size = new System.Drawing.Size(69, 15);
-            this.lbl_save_action.TabIndex = 48;
-            this.lbl_save_action.Text = "Save Mode";
             // 
             // grid_number
             // 
@@ -499,6 +443,69 @@
             // 
             this.Column2.HeaderText = "";
             this.Column2.Name = "Column2";
+            // 
+            // btn_save
+            // 
+            this.btn_save.Location = new System.Drawing.Point(1189, 638);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(121, 35);
+            this.btn_save.TabIndex = 43;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.Location = new System.Drawing.Point(1316, 638);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(118, 35);
+            this.btn_cancel.TabIndex = 44;
+            this.btn_cancel.Text = "Cancel";
+            this.btn_cancel.UseVisualStyleBackColor = true;
+            // 
+            // pdb_image
+            // 
+            this.pdb_image.Location = new System.Drawing.Point(12, 23);
+            this.pdb_image.Name = "pdb_image";
+            this.pdb_image.Size = new System.Drawing.Size(260, 213);
+            this.pdb_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pdb_image.TabIndex = 45;
+            this.pdb_image.TabStop = false;
+            // 
+            // btn_open_img
+            // 
+            this.btn_open_img.Location = new System.Drawing.Point(12, 251);
+            this.btn_open_img.Name = "btn_open_img";
+            this.btn_open_img.Size = new System.Drawing.Size(260, 35);
+            this.btn_open_img.TabIndex = 46;
+            this.btn_open_img.Text = "Select Image";
+            this.btn_open_img.UseVisualStyleBackColor = true;
+            this.btn_open_img.Click += new System.EventHandler(this.btn_open_img_Click);
+            // 
+            // lbl_img
+            // 
+            this.lbl_img.AutoSize = true;
+            this.lbl_img.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_img.Location = new System.Drawing.Point(12, 301);
+            this.lbl_img.Name = "lbl_img";
+            this.lbl_img.Size = new System.Drawing.Size(70, 15);
+            this.lbl_img.TabIndex = 47;
+            this.lbl_img.Text = "Image Path";
+            // 
+            // lbl_save_action
+            // 
+            this.lbl_save_action.AutoSize = true;
+            this.lbl_save_action.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_save_action.Location = new System.Drawing.Point(302, 24);
+            this.lbl_save_action.Name = "lbl_save_action";
+            this.lbl_save_action.Size = new System.Drawing.Size(69, 15);
+            this.lbl_save_action.TabIndex = 48;
+            this.lbl_save_action.Text = "Save Mode";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "";
+            this.Column3.Name = "Column3";
             // 
             // Form1
             // 
@@ -603,6 +610,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn grid_address;
         private System.Windows.Forms.DataGridViewLinkColumn Column1;
         private System.Windows.Forms.DataGridViewLinkColumn Column2;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column3;
     }
 }
 

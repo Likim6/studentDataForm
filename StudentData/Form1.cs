@@ -279,11 +279,36 @@ namespace StudentData
                 MessageBox.Show($"An error occured: {e.Message}");
             }
         }
+        
+        private void RemoveLineFromFile(DataGridViewCellEventArgs e)
+        {
+            int row = e.RowIndex;
+            string emp_code = dgv_list_emp.Rows[row].Cells[1].Value.ToString();
+            int lineToRemove = get_line_edit_data(emp_code);
+            List<string> lines = File.ReadAllLines(db).ToList();
+            if(lineToRemove >= 1 && lineToRemove <= lines.Count)
+            {
+                lines.RemoveAt(lineToRemove - 1);
+                File.WriteAllLines(db, lines);
+            }
+            else
+            {
+                MessageBox.Show("Invalid line number. No changes made.");
+            }
+        }
 
         private void dgv_list_emp_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            selec_row_data_list(e);
-            lbl_save_action.Text = "Edit Mode";
+            if(e.ColumnIndex == 10)
+            {
+                selec_row_data_list(e);
+                lbl_save_action.Text = "Edit Mode";
+            }
+            if(e.ColumnIndex == 11)
+            {
+                RemoveLineFromFile(e);
+                dgv_list_emp.Rows.RemoveAt(e.RowIndex);
+            }
         }
     }
 }
